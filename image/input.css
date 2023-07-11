@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+:root{
+    --color1--: #dbd8e3;
+    --color2--: #5c5470;
+    --color3--:#352f44 ;
+    --color4--:#2a2438;
+    --color5--:#8199a9;
+    --color-6:#430f58;
+    --color-7:#fff;
+    --color-dark1: rgb(39, 39, 39);
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition:all .5 linear  ;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+
+
+html{
+    font-size:65.5%;
+    overflow-x: hidden;
+}
+
+.header{
+    position: fixed;
+    background: var(--color-dark4);
+    top:0; left:0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 1px 1px 4px var(--color-7--);
+}
+.navigation_header{
+    display:flex;
+    align-items: center;
+    gap: 4rem;
+    z-index: 2;
+}
+
+
+.navigation_header a{
+    color: var(--color1--);
+    transition: 1s;
+    font-size:2rem;
+    letter-spacing: .4rem;
+    gap: 2rem;
+}
+.navigation_header a:hover{
+    color: var(--color2--);
+}
+
+.navigation_header .active{
+    background: var(--color4----);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.btn_icon_header{
+    background: transparent;
+    border: none;
+    color: var(--color1--);
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .navigation_header{
+        position: absolute;
+        flex-direction: column !important;
+        top: 10px;
+        background: var(--color1--);
+        height: 100%;
+        width: 35vw;
+        padding: 1rem;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+    .btn_icon_header{
+        display: block;
+    }
+    .navigation_header .active{
+        background: transparent;
+    }
+
+
+}
+
+.card{
+    background: var(--color-dark2);
+}
+.login{
+    background: var(--color-dark5);
+}
+form{
+    background: var(--color-6);
+}
+@keyframes showSidebar {
+    from {margin-left: -100vw;}
+    to {margin-left: -10vw;}
+}
+main{
+    padding: 5rem 9%;
+}
+
+
+
+main{
+    background: var(--color-dark4);
+}
+
+.content{
+    background: var(--color-dark2);
+    color: var(--color-7);
+    box-shadow: 4px 5px 9px var(--color-6);
+}
+
+.content-1{
+    background: var(--color-dark4);
+    box-shadow: 4px 5px 9px var(--color-6);
+    color: var(--color-7);
+}
+
+.content:hover{
+    background: var(--color-7);
+    transition: all 3s;
+    color: #010101;
+}
+
+
+
+
+
+.main-login{
+    background: var(--color1--);
+}
+
+.left-login > h1{
+    color:var(--color4--);
+    font-size: 3rem;
+}
+
+.right-login{
+   
+}
+
+.card-login{
+   
+}
+
+
+.card-login > h1{
+    font-size: 2.5rem;
+    color:var(--color4--);
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
+
+.textfield > label{
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: .5rem;
+    color: var(--color4--);
+    transition: .5s ease-in-out;
+}
+ 
+.textfield > input{
+    font-size: 1.5rem;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    color: var(--color4--);
+    border: 0;
+    border-bottom: .10rem solid var(--color4--);
+}
+
+.field-feedback{
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    
+    
+}
+
+.field-feedback label{
+    font-size:2rem;
+}
+.field-feedback textarea{
+    resize: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--color4--);
+    border-radius: .5rem;
+    transition: .5s ease-in-out;
+    
+}
+
+.field-feedback textarea:hover{
+    box-shadow: .5rem .5rem 2rem var(--color4--);
+}
+
+
+.textfield > input:focus,
+.textfield > input:valid{
+    border-bottom: .1rem solid var(--color-6);
+}
+
+.textfield > input:focus ~ label,
+.textfield > input:valid ~ label{
+    transform: translateY(-4rem);
+    font-size: 1.5rem;
+    color: var(--color-6);
+}
+
+.card-login .wrapper {
+    display: block;
+    width: 18rem;
+    height: 4rem;
+    line-height: 3.2rem;
+    font-size: 2rem;
+    color: var(--color4--);
+    border: .2rem solid var(--color4--);
+    letter-spacing: .5rem;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    cursor: pointer;
+  }
+  
+  .card-login .wrapper {
+    position: relative;
+    z-index: 2;
+    
+  }
+
+ 
+  
+  .card-login .wrapper:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color2--);
+    transition: all .35s;
+  }
+  
+  .card-login .wrapper span{
+    color: var(--color-6--);
+    position: relative;
+    z-index: 1;
+  }
+
+
+  
+  .card-login .wrapper:hover:after{
+    width: 100%;
+  }
+ 
+  @media screen and (max-width: 768px){
+    html{
+        overflow-x: hidden;
+        font-size: 50%;
+    }
+
+    .image-training{
+        width:12%;
+        border-radius: 1rem;
+     }
+
+     .main-login{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        
+    }
+
+    .left-login{
+        height: 40%;
+        width:100%;
+        padding: 2rem;
+       
+    }
+
+    .right-login{
+        width: 100%;
+        height: 50%;
+        padding: 2rem;
+    }
+    
+    .card-login{
+        width:100%;
+    }
+
+}
