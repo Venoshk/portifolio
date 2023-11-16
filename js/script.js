@@ -34,7 +34,7 @@ const showLoading = (show) => {
     setTimeout(() => {
         interagir()
         showLoading(false)
-    },2000);
+    },);
   });
   //Enviando formulario!
   const btn = document.querySelector('#btn');
@@ -51,7 +51,6 @@ const showLoading = (show) => {
             showLoading(false) 
             
         }, 2000);
-         btn.innerHTML = 'enviado'
       }, (err) => {
         alert(JSON.stringify(err));
       });
