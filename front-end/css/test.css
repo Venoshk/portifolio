@@ -1,0 +1,672 @@
+:root{
+    --colorprinc:#010000;
+    --colorOne:#20031f;
+    --colorTwo:#3f053f;
+    --colorTree:#5f085e;
+    --colorFor:#7e0a7e;
+}
+
+  .item-hints .hint {
+    margin: 180px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(.105);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+  .item-hints .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints .hint[data-position="4"] .hint-content {
+    top: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .item-hints .hint-content p{
+    padding: 10px;
+  }
+  .item-hints .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+  }
+  .item-hints .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints .hint:hover .hint-content::before {
+    width: 180px;
+    transition: all 0.4s;
+  }
+  .item-hints .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-125deg);
+    bottom: 29px;
+    left: 0;
+    width: 79px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints .hint[data-position="4"] .hint-content {
+    bottom: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+
+  /*js*/
+
+  .item-hints-js .hint {
+    margin: 105px 10px  ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints-js .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(.105);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+
+  
+  .item-hints-js .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints-js .hint[data-position="4"] .hint-content {
+    top: 55px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints-js .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .item-hints-js .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+  }
+
+  .item-hints-js .hint-content p {
+    padding: 10px;
+  }
+  .item-hints-js .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints-js .hint:hover .hint-content::before {
+    width: 180px;
+    transition: all 0.4s;
+  }
+  .item-hints-js .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-125deg);
+    transform: rotate(-125deg); /*rodação da linha*/
+    bottom: 29px;
+    left: 0;
+    width: 85px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints-js .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints-js .hint[data-position="4"] .hint-content {
+    bottom: 55px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  
+  /*CSS*/
+
+  .item-hints-css .hint {
+    margin: 180px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints-css .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(.105);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+  .item-hints-css .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints-css .hint[data-position="4"] .hint-content {
+    top: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints-css .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .item-hints-css .hint-content p {
+    padding-top: 10px;
+  }
+  .item-hints-css .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+    
+  }
+  .item-hints-css .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints-css .hint:hover .hint-content::before {
+    width: 90%;
+    transition: all 0.4s;
+  }
+  .item-hints-css .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-125deg);
+    bottom: 29px;
+    left: 0;
+    width: 80px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints-css .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints-css .hint[data-position="4"] .hint-content {
+    bottom: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+
+  /*docker*/
+
+  .item-hints-docker .hint {
+    margin: 100px 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints-docker .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(.105);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+  .item-hints-docker .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints-docker .hint[data-position="4"] .hint-content {
+    top: 55px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints-docker .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .item-hints-docker .hint-content p {
+    padding: 10px;
+  }
+
+  .item-hints-docker .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+  }
+  .item-hints-docker .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints-docker .hint:hover .hint-content::before {
+    width: 180px;
+    transition: all 0.4s;
+  }
+  .item-hints-docker .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-125deg);
+    transform: rotate(-125deg);
+    bottom: 29px;
+    left: 0;
+    width: 83px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints-docker .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints-docker .hint[data-position="4"] .hint-content {
+    bottom: 55px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  
+  /*nodejs*/
+
+  .item-hints-nodejs .hint {
+    margin: 150px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints-nodejs .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(0.95);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+  .item-hints-nodejs .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints-nodejs .hint[data-position="4"] .hint-content {
+    top: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints-nodejs .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .item-hints-nodejs .hint-content p {
+    padding: 10px;
+  }
+
+  .item-hints-nodejs .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+  }
+  .item-hints-nodejs .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints-nodejs .hint:hover .hint-content::before {
+    width: 100%;
+    transition: all 0.4s;
+  }
+  .item-hints-nodejs .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-125deg);
+    bottom: 29px;
+    left: 0;
+    width: 80px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints-nodejs .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints-nodejs .hint[data-position="4"] .hint-content {
+    bottom: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+
+  /*GIT*/
+
+  .item-hints-git .hint {
+    margin: 70px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-hints-git .hint-dot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    border: 1px solid var(--colorTree);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(-0%, -0%) scale(.105);
+    transform: translate(-0%, -0%) scale(0.95);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorFor);
+  }
+  .item-hints-git .hint-radius {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  .item-hints-git .hint[data-position="4"] .hint-content {
+    top: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  .item-hints-git .hint-content {
+    width: 300px;
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 0;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .item-hints-git .hint-content p {
+    padding: 10px;
+  }
+
+  .item-hints-git .hint:hover .hint-content {
+    position: absolute;
+    z-index: 5;
+    padding: 35px 0;
+    opacity: 1;
+    -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+    color: var(--colorprinc);
+    visibility: visible;
+    pointer-events: none;
+  }
+  .item-hints-git .hint-content::before {
+    width: 0px;
+    bottom: 29px;
+    left: 0;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    transition: all 0.4s;
+  }
+  .item-hints-git .hint:hover .hint-content::before {
+    width: 90%;
+    transition: all 0.4s;
+  }
+  .item-hints-git .hint-content::after {
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-125deg);
+    bottom: 29px;
+    left: 0;
+    width: 80px;
+    content: "";
+    background-color: var(--colorprinc);
+    height: 1px;
+    position: absolute;
+    opacity: 10;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .item-hints-git .hint:hover .hint-content::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  .item-hints-git .hint[data-position="4"] .hint-content {
+    bottom: 50px;
+    left: 50%;
+    margin-left: 56px;
+  }
+  
+  

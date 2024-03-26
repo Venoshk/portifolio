@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --colorprinc:#010000;
+    --colorOne:#20031f;
+    --colorTwo:#3f053f;
+    --colorTree:#5f085e;
+    --colorFor:#7e0a7e;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background-color: #fff;
+}
+
+::-webkit-scrollbar{
+  background-color: var(--colorprinc);
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--colorprinc);
+}
+
+
+
+header{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.18);
+  transition: all .5s ease-in-out;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+header > nav{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+nav .toggle{
+  margin-left: 2rem;
+}
+nav .toggle > .logo h2{
+ color: var(--colorFor);
+} 
+nav .toggle > .logo h2 > span{
+  color: var(--colorprinc);
+}
+nav > ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+nav > ul > li{
+  position: relative;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav > ul > li::before{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #7e0a7e;
+  transition: all .4s ease;
+}
+
+nav > ul > li:hover::before{
+  width: 100%;
+  transition: all .4s ease;
+}
+nav > ul > li a{
+  text-align: center;
+  color: var(--colorprinc);
+  font-weight: 600;
+}
+
+nav > .btn-sidebar-menssage{
+  background-color: var(--colorprinc);
+  color: #fff;
+  padding: 10px ;
+  border-radius: 5px;
+}
+
+nav > .btn-sidebar-menssage:hover{
+  border: 1px solid var(--colorprinc);
+  background-color: transparent;
+  color: var(--colorprinc);
+}
+
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+/*Primeira sessão*/
+.container{ 
+  margin-top: 120px;
+}
+
+
+.home{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  gap: 2rem;
+}
+.home .content > h1{
+  margin-bottom: 2rem;
+  color: var(--colorprinc);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.home .content h1 span{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--colorFor);
+}
+
+.home .content p{
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.home .content p span{  
+  color: var(--colorFor);
+}
+
+.home .content ul {
+  list-style: none;
+  transition: all .5s ease;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+.image img{
+  max-width: 500px;
+ }  
+/*Primeira sessão: END*/
+
+/*Segunda sessão*/
+.trainig {
+  margin-top: 2rem;
+}
+
+.trainig > h1{
+  font-weight: 500;
+}
+.trainig .content{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
+/*Segunda sessão:END*/
+
+.experience{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+}
+.experience .content > h2{
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.experience .content > p{
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.experience .content > p span{
+  color: var(--colorFor);
+}
+
+/*experience:END*/
+
+.projects {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.projects .content > h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.projects .content > p {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.projects .content .buttons{
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+}
+.projects .content .buttons > button{
+  background-color: var(--colorprinc);
+  color: #fff;
+  padding: 10px ;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.projects .content .buttons > button:hover{
+  background-color: transparent;
+  color: var(--colorprinc);
+  border: 1px solid var(--colorprinc);
+}
+
+.card--project-one {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  transform: translate(100%, 0);
+  z-index: -1;
+}
+
+.card--project-two {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  transform: translate(100%, 0);
+  z-index: -1;
+}
+
+.card--project--active {
+  transform: translate(-100%, 0);
+  z-index: 1; /* Adicionei z-index 1 para que a classe ativa fique sobreposta */
+  transition: all 2s ease-in-out;
+}
+
+
+.card-container {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-container::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, var(--colorprinc) 0%, var(--colorFor) 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.card .img-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+.card .img-content img {
+  width: 100%;
+  height: 300px;
+  fill: #212121;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: #e8e8e8;
+  padding: 20px 24px;
+  line-height: 1.5;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content .heading {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .img-content {
+  scale: 2.5;
+  rotate: 30deg;
+  filter: blur(7px);
+}
+
+.card:hover .img-content svg {
+  fill: transparent;
+}
+
+
+
+
