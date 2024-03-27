@@ -6,6 +6,10 @@
     main{
       padding: 2rem;
     }
+
+    header{
+      max-width: 1200px;
+    }
     header > nav{
         position: fixed;
         display: flex;
