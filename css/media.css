@@ -1,0 +1,323 @@
+#toggleChecker{
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    main{
+      padding: 2rem;
+    }
+    header > nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        width: 40vh;
+        height: 100vh;
+        background-color: #ddd;
+        transform: translate(100%, 0);
+        box-shadow: 0 0 5px 10px rgba(0,0,0,0.18);
+        z-index: 2;
+    }
+
+    nav .logo{
+        position: absolute;
+        left: 20px;
+      }
+
+    .openNavBar{
+        transform: translate(0,0);
+    }
+
+    nav > ul {
+        position: absolute;
+        left: 20px;
+        top: 30%;
+        flex-direction: column;
+        align-items: start;
+    }
+    nav > ul > li a.active{
+        background-color: #8383833a;
+        padding: 0 20px 0 20px;
+    }
+    
+    nav > ul > li > a.active::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 3px;
+        height: 100%;
+        
+        background-color: #7e0a7e;
+        transition: all .4s ease;
+      }
+      
+      nav > ul > li > a .active:hover::after{
+        left: 2px;
+        transition: all .4s ease;
+      }
+
+      nav > ul > li a:hover{
+        padding-left: 16px;
+      }
+      
+
+    .checkboxtoggler {
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        cursor: pointer;
+        z-index: 4;
+      }
+      
+      .line-1 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      .line-2 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      .line-3 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      #toggleChecker {
+        height: 3em;
+        width: 100%;
+        display: none;
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+        -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+        -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+        transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+        -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+        -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+        transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      /*item-hints*/
+    
+      /* Esconde o conteúdo quando o tamanho da tela for menor ou igual a 768 pixels */
+
+      .item-hints .hint-content {
+        display: none;
+      }
+
+      /*js*/
+    
+      .item-hints-js .hint-content {
+        display: none;
+      }
+
+      
+      /*CSS*/
+    
+      .item-hints-css .hint-content {
+        display: none;
+      }
+    
+      /*docker*/
+    
+      .item-hints-docker .hint-content {
+        display: none;
+      }
+
+      
+      /*nodejs*/
+    
+      .item-hints-nodejs .hint-content {
+        display: none;
+      }
+      
+    
+      /*GIT*/
+    
+      .item-hints-git .hint-content {
+        display: none;
+      }
+      
+      .experience{
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .experience .image{
+        grid-area: 1/1/1/1;
+      }
+
+      .projects{
+        position: relative;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .card--project-one,
+      .card--project-two,
+      .card--project--active {
+        height: auto;
+        position: relative; /* Altera a posição para relativa */
+        width: 100%; /* Define a largura para preencher a largura do contêiner */
+        transform: translateX(-120%); /* Move os elementos para baixo */
+        transition: all 2s ease-in-out; /* Adiciona a transição para suavizar o movimento */
+      }
+    
+      .card--project--active {
+        transform: translateX(0); /* Move o elemento ativo de volta para a posição inicial */
+        z-index: 1; /* Define um z-index superior para que o elemento ativo fique sobreposto */
+      }
+      
+      .card-container {
+        width: 250px;
+        height: 200px;
+        position: relative;
+        border-radius: 10px;
+      }
+}
+
+@media screen and (max-width:368px) {
+
+    html{
+        font-size: 65.5%;
+    }
+
+    header > nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        width: 30vh;
+        height: 100vh;
+        background-color: #ddd;
+        transform: translate(100%, 0);
+        box-shadow: 0 0 5px 10px rgba(0,0,0,0.18);
+        z-index: 2;
+    }
+
+    nav .logo{
+        position: absolute;
+        left: 20px;
+      }
+
+    .openNavBar{
+        transform: translate(0,0);
+    }
+
+    nav > ul {
+        position: absolute;
+        left: 0;
+        top: 30%;
+        flex-direction: column;
+        align-items: start;
+    }
+    nav > ul > li a{
+        background-color: #8383833a;
+        padding: 0 20px 0 20px;
+    }
+    nav > ul > li a.active{
+        background-color: #8383833a;
+        padding: 0 20px 0 20px;
+    }
+    
+    nav > ul > li > a.active::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 3px;
+        height: 100%;
+        
+        background-color: #7e0a7e;
+        transition: all .4s ease;
+      }
+      
+      nav > ul > li a:hover{
+        padding-left: 16px;
+      }
+      
+      nav > .btn-sidebar-menssage{
+        display: none;
+      }
+
+    .checkboxtoggler {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        cursor: pointer;
+        z-index: 4;
+      }
+      
+      .line-1 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      .line-2 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      .line-3 {
+        background: var(--colorprinc);
+        height: 0.3em;
+        border-radius: 10em;
+        transition-duration: 500ms;
+      }
+      
+      #toggleChecker {
+        height: 3em;
+        width: 100%;
+        display: none;
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+        -webkit-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+        -ms-transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+        transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+        -webkit-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+        -ms-transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+        transform: rotate(-45deg) translateY(0em) translateX(0.1em);
+      }
+      
+      #toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      .home{
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .home .image{
+        grid-area: 1/1/1/1;
+      }
+}
