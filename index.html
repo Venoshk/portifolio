@@ -6,7 +6,8 @@
     <title>Portífolio</title>
     <link rel="shortcut icon" href="./Logos/LogoTree.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/item-hints.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <!--==LINKS PARA AOS-MASTES-->
@@ -17,7 +18,16 @@
 </head>
 <body>
         <header>
-            <nav>
+          
+              <input id="toggleChecker" type="checkbox" class="button">
+              <label id="togglerLable" for="toggleChecker">
+              <div class="checkboxtoggler">
+                  <div class="line-1"></div>
+                  <div class="line-2"></div>
+                  <div class="line-3"></div>
+              </div>
+              </label>
+            <nav class="sidebar isOpen">
                 <div class="toggle">
                     <div class="logo">
                         <h2>Web<span>Devolper</span></h2>
@@ -27,17 +37,18 @@
                 <ul class="sidebar">
                     <li><a href="#Home" class="active">Home</a></li>
                     <li><a href="#trainig" id="test">Conhecimento</a></li>
-                    <li><a href="#experience">Projetos</a></li>
+                    <li><a href="#projects">Projetos</a></li>
                     <li><a href="#Contato">Contato</a></li>
                 </ul>
         
                 <a class="btn-sidebar-menssage" id="btn"  href="#form">Enviar menssagem</a>
             </nav>
+            <div class="fechaMenu isClose"></div>
         </header>
 
         <main class="container">
 
-            <section class="home">
+            <section class="home" id="Home">
                 <div class="content">
                     <h1  data-aos="zoom-out-up">Olá me chamo <span data-aos="fade-up" data-aos-duration="2000">Paulo</span>, Web Devolper</h1>
                 
@@ -124,7 +135,7 @@
                 </div>
             </section>
 
-            <section class="trainig">
+            <section class="trainig" id="trainig">
                 <h1 data-aos="fade-right" data-aos-duration="1000">Meus Conhecimentos</h1>
                 <div class="content">
               
@@ -223,52 +234,33 @@
 
                 </div>
             
-                <div class="logos">
-                  <div class="logos-slide">
-                    <img src="Logos/docker-svgrepo-com.svg" />
-                    <img src="Logos/git-svgrepo-com.svg" />
-                    <img src="Logos/mysql-logo-svgrepo-com.svg" />
-                    <img src="Logos/nodejs-1-logo-svgrepo-com.svg" />
-                    <img src="Logos/react-javascript-js-framework-facebook-svgrepo-com.svg"/>
-                    <img src="Logos/tailwind-svgrepo-com.svg" />
-                    <img src="Logos/css3-svgrepo-com.svg" alt="">
-                    <img src="Logos/html-svgrepo-com.svg" alt="">
-                  </div>
-            
-                  <div class="logos-slide">
-                      <img src="Logos/docker-svgrepo-com.svg" />
-                      <img src="Logos/git-svgrepo-com.svg" />
-                      <img src="Logos/mysql-logo-svgrepo-com.svg" />
-                      <img src="Logos/nodejs-1-logo-svgrepo-com.svg" />
-                      <img src="Logos/react-javascript-js-framework-facebook-svgrepo-com.svg"/>
-                      <img src="Logos/tailwind-svgrepo-com.svg" />
-                      <img src="Logos/css3-svgrepo-com.svg" alt="">
-                      <img src="Logos/html-svgrepo-com.svg" alt="">
-                  </div>
-                </div>
+                
             </section>
 
-            <section class="experience">
-              
+            <section class="experience" id="experience">
+              <div data-aos="fade-left" class="image">
+                <img  src="Logos/LogoTwo.svg" alt="">
+              </div>
+
               <div class="content">
                   <h2 data-aos="zoom-in" data-aos-duration="1000">Um pouco sobre minha trajetoria</h2>
                   <p data-aos="fade-left " data-aos-duration="1000">Trabalho em projetos de desenvolvimento de softwares e aplicações de melhorias em softwares já existentes; Acompanhamento de execução de programas e suas devidas manutenções; Suporte Técnico e trabalho para resoluções de problemas e gargalos nos códigos</p>
                   <p>Cursos: <span>Desenvolvimento Web,  Design Ux  e  Design Ui </span></p>
               </div>
                   
-              <div data-aos="fade-left" class="image">
-                <img  src="Logos/LogoTwo.svg" alt="">
-            </div>
+              
               
             </section>
 
-            <section class="projects">
+            <section class="projects" id="projects">
                <div class="content">
                 <h1  data-aos="fade-up" data-aos-duration="1000">Vou mostrar alguns projetos interessantes para você.</h1>
                 <p  data-aos="fade-right" data-aos-duration="3000">Todos os projetos foi pensado na experiência do usuario.</p>
+                <p>Caso queira ver outros projetos é so acessar meu <a class="link" href="https://github.com/Venoshk">GitHub</a></p>
                 <p data-aos="fade-up" data-aos-duration="1000">Escolha qual quer ver primeiro &#11088 </p>
+                
                 <div class="buttons">
-                  <button type="button" class="buttonsBtn" data-aos="fade-right" data-aos-duration="1000">
+                  <button type="button" class="buttonsBtn" data-aos="fade-right" data-aos-duration="500">
                     Ecommecer
                   </button>
 
@@ -311,6 +303,30 @@
                     </div>
                   </div>
                </div>
+            </section>
+
+            <section class="logos">
+              <div class="logos-slide">
+                <img src="Logos/docker-svgrepo-com.svg" />
+                <img src="Logos/git-svgrepo-com.svg" />
+                <img src="Logos/mysql-logo-svgrepo-com.svg" />
+                <img src="Logos/nodejs-1-logo-svgrepo-com.svg" />
+                <img src="Logos/react-javascript-js-framework-facebook-svgrepo-com.svg"/>
+                <img src="Logos/tailwind-svgrepo-com.svg" />
+                <img src="Logos/css3-svgrepo-com.svg" alt="">
+                <img src="Logos/html-svgrepo-com.svg" alt="">
+              </div>
+        
+              <div class="logos-slide">
+                  <img src="Logos/docker-svgrepo-com.svg" />
+                  <img src="Logos/git-svgrepo-com.svg" />
+                  <img src="Logos/mysql-logo-svgrepo-com.svg" />
+                  <img src="Logos/nodejs-1-logo-svgrepo-com.svg" />
+                  <img src="Logos/react-javascript-js-framework-facebook-svgrepo-com.svg"/>
+                  <img src="Logos/tailwind-svgrepo-com.svg" />
+                  <img src="Logos/css3-svgrepo-com.svg" alt="">
+                  <img src="Logos/html-svgrepo-com.svg" alt="">
+              </div>
             </section>
         </main>
     
