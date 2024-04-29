@@ -1,0 +1,283 @@
+@media screen and (max-width: 768px){
+
+
+  html{
+    font-size: 50%;
+    overflow-x: hidden;
+  }
+
+  main{
+    padding: 2rem 2rem;
+  }
+
+  nav{
+    width: 30vh;
+    height: 100vh;
+    flex-direction: column;
+    transform: translate(120%,0);
+  }
+
+  nav > .logo {
+    position: relative;
+  }
+
+  nav .logo img{
+    top: -35px;
+    width: 100px;
+    height: 100px;
+  }
+
+  nav > .logo h2{
+    font-size: 2rem;
+  }
+
+  nav > ul{
+    flex-direction: column;
+  }
+
+  nav > ul > li a {
+    font-size: 2rem;
+  }
+
+  .openNavBar{
+    transform: translate(0,0);
+  }
+
+  /* Hide the default checkbox */
+
+  .container_check {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+  }
+
+.container_check input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  border: 2px solid red;
+}
+
+
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 2px;
+  background-color: #7e0a7e;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.container input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
+}
+
+/*Primeira sessão*/
+
+.home .container{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.home .container .image{
+  grid-area: 1/1/1/1;
+}
+
+/*Segunda sessão*/
+.projects > .content_project .card{
+  width: 352px;
+  height: 245px;
+}
+
+/*terceira sessão*/
+.logos{
+  position: absolute;
+}
+
+/*quarta sessão*/
+
+.experience > .container{
+  height: 100vh;
+  grid-template-columns: repeat(1, 1fr);
+
+}
+
+
+}
+
+
+@media screen and (max-width: 368px){
+  nav{
+    width: 30vh;
+    height: 100vh;
+    flex-direction: column;
+    transform: translate(120%,0);
+  }
+
+  nav .logo img{
+    top: -35px;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+  }
+
+  nav > .logo h2{
+    font-size: 2rem;
+  }
+
+  nav > ul{
+    flex-direction: column;
+  }
+
+  nav > ul > li a {
+    font-size: 2rem;
+  }
+
+  .openNavBar{
+    transform: translate(0,0);
+  }
+
+  /* Hide the default checkbox */
+.container_check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+}
+
+.container_check {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+
+  z-index: 2;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 2px;
+  background-color: #7e0a7e;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.container input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
+}
+
+/*Primeira sessão*/
+
+.home .container{
+ 
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.home .container .image{
+  grid-area: 1/1/1/1;
+}
+
+}
