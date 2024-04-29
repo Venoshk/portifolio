@@ -3,56 +3,68 @@ AOS.init({
     easing: 'ease-in-out-sine'
 });
 
-const btn = document.querySelector(".buttonsBtn");
-const btnTwo = document.querySelector(".buttonsBtnTwo");
-const cardOne = document.querySelector(".card--project-one");
-const cardTwo = document.querySelector(".card--project-two");
-let isOpenOne = true;
-let isOpenTwo = true
+//NavBar
+const toggleChecker = document.querySelector("#toggleChecker");
+const navBar = document.querySelector("nav");
+const isCloseMenu = document.querySelector(".closeMenu");
 
-btn.addEventListener("click", () =>{
-  if(isOpenOne){
-    cardOne.classList.add("card--project--active");
-    btn.innerHTML = 'Fechar'
+function OpenNavBar(){
+  isCloseMenu.classList.toggle('isClose');
+
+  if(toggleChecker.checked){
+    navBar.classList.add("openNavBar");
+
   }else{
-    cardOne.classList.remove("card--project--active");
-    btn.innerHTML = 'Ecommecer'
+    navBar.classList.remove("openNavBar");
+  };
+};
+
+function closeNavBar(){
+  toggleChecker.checked = false; // Defina o estado do toggleChecker para false
+  
+  isCloseMenu.classList.add('isClose');
+  navBar.classList.remove("openNavBar");
+};
+
+toggleChecker.addEventListener('click', OpenNavBar);
+isCloseMenu.addEventListener('click',closeNavBar);
+
+//NavBar links
+
+const linksAll = document.querySelectorAll("a");
+
+navBar.addEventListener('click', (e) => {
+  closeNavBar();
+  if (e.target.tagName === 'A') {
+    linksAll.forEach(link => {
+      link.classList.remove('active');
+    });
+    e.target.classList.add('active');
   }
-  isOpenOne = !isOpenOne; // Alternar o estado da variável isOpenOne
 });
 
-btnTwo.addEventListener('click', () => {
-  if(isOpenTwo){
-    cardTwo.classList.add("card--project--active");
-    btnTwo.innerHTML = 'Fechar'
+
+//scroll
+
+const scrollBtn = document.querySelector("#scrollBtn");
+const mouseContainer =  document.querySelector('.container_mouse');
+
+scrollBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  // Rolar para baixo
+  var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  // Verificar se a largura da janela é menor ou igual a 768px
+  if (width <= 768) {
+    window.scrollBy(0, window.innerHeight); // Rolar para a próxima página inteira
+  } else {
+    // Se não for menor ou igual a 768px, apenas rolar suavemente para baixo
+    scrollBtn.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
-  else{
-    cardTwo.classList.remove("card--project--active");
-    btnTwo.innerHTML = 'Landing-Page'
-  }
+});
 
-  isOpenTwo = !isOpenTwo;
-})
-
-
-
-console.log(toggle);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(toggle)
 
 
 
