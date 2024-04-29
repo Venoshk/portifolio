@@ -497,19 +497,19 @@ main{
 
 .content_project_card_Pizza > #div1{
   background-color: #000;
-  background-image: url(/Logos/pizzasOne.png);
+  background-image: url(Logos/pizzasOne.png);
   border-radius: 10px 0 0 10px;
 }
 
 .content_project_card_Pizza > #div2{
   background-color: #000;
-  background-image: url(/Logos/pizzaTwo.png);
+  background-image: url(Logos/pizzaTwo.png);
 
 }
 
 .content_project_card_Pizza > #div3{
   background-color: #000;
-  background-image: url(/Logos/pizzaTree.png);
+  background-image: url(Logos/pizzaTree.png);
   border-radius: 0 10px 10px 0;
 }
 
@@ -534,19 +534,19 @@ main{
 
 .content_project_card_JobFinder > #div1{
   background-color: #000;
-  background-image: url(/Logos/jobfinderOne.png);
+  background-image: url(Logos/jobfinderOne.png);
   border-radius: 10px 0 0 10px;
 }
 
 .content_project_card_JobFinder > #div2{
   background-color: #000;
-  background-image: url(/Logos/jobfinderTwo.png);
+  background-image: url(Logos/jobfinderTwo.png);
 
 }
 
 .content_project_card_JobFinder > #div3{
   background-color: #000;
-  background-image: url(/Logos/jobfinderTree.png);
+  background-image: url(Logos/jobfinderTree.png);
   border-radius: 0 10px 10px 0;
 }
 
@@ -571,19 +571,19 @@ main{
 
 .content_project_card_landingPage > #div1{
   background-color: #000;
-  background-image: url(/Logos/landingPageOne.png);
+  background-image: url(Logos/landingPageOne.png);
   border-radius: 10px 0 0 10px;
 }
 
 .content_project_card_landingPage > #div2{
   background-color: #000;
-  background-image: url(/Logos/landingPageTwo.png);
+  background-image: url(Logos/landingPageTwo.png);
 
 }
 
 .content_project_card_landingPage > #div3{
   background-color: #000;
-  background-image: url(/Logos/landingPageTree.png);
+  background-image: url(Logos/landingPageTree.png);
   border-radius: 0 10px 10px 0;
 }
 
