@@ -13,6 +13,15 @@
     font-size: 65.5%;
   }
 
+  ::-webkit-scrollbar {
+    width: 5px;  
+  }
+  
+::-webkit-scrollbar-track {
+    background: #7223cf; 
+    border-radius: 20px;     
+  }
+
   #particles-js {
     position: absolute;
     width: 100%;
@@ -31,59 +40,8 @@
     --primary-btn: #440f81;
 }
 
-main{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--second);
-}
-
-.hamburger {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-.hamburger input {
-  display: none;
-}
-
-.hamburger svg {
-  /* The size of the SVG defines the overall size */
-  height: 5em;
-  /* Define the transition for transforming the SVG */
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line {
-  fill: none;
-  stroke: white;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  /* Define the transition for transforming the Stroke */
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-
-.hamburger input:checked + svg {
-  transform: rotate(-45deg);
-}
-
-.hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
-
 
 .header{
-    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: var(--second);
@@ -352,134 +310,136 @@ main{
 /*Section-projects*/
 
 .projects{
-    position: relative;
-    width: 100vw;
-    background-color: #7c23cf;
-    text-align: center;
+  background-color: #7c23cf;
+  position: relative;
+  width: 100vw;
+  background-color: #7c23cf;
+  text-align: center;
+  padding: 0 1rem;
 }
 
-
-
-.projects > h2{
-  font-size: 42px;
-  color: #fff;
+.headline{
+  margin-bottom: 2rem;
 }
 
-.projects h3 {
-  font-size: 2rem;
-  color: #fff;
+.headline > h2{
+font-size: 42px;
+color: #fff;
 }
 
-.projects h3 > a{
-  color: #000;
+.headline h3 {
+font-size: 2rem;
+color: #fff;
+}
+
+.headline h3 > a{
+color: #000;
 }
 
 /*card-context*/
-.card_content{
-  margin-top: 5rem;
-  padding: 2rem 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-evenly;
-  gap: 100px;
+.content-card{
+
+display: flex;
+flex-direction: row;
+height: auto;
+justify-content:space-evenly;
+gap: 20px;
+padding: 2rem 2rem;
 }
 /*card*/
 .card{
-  display: flex;
-  flex: 2 2 200px;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 430px;
-  gap: 12px;
-}
-
-.card > span{
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-/*Button cards*/
-.card > button{
-  display: flex;
-  border-radius: 24px;
-  border: none;
-  background-color: transparent;
-  font-weight: 500;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
+position: relative;  
+background-color: #000000ce;
+display: flex;
+flex-direction: column;
+align-items: start;
+width: 380px;
+max-height: auto;
+padding: 2rem 2rem;
+border-radius: 14px;
 
 }
 
-.card > button > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 20px ;
-  border-radius: 24px;
-  border: none;
-  gap: 8px;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-}
-
-.btn-face-white{
-  background-color: white;
-  display: flex;
-}
-
-.card > button > .btn-face-purple{
-  display: none;
-  background-color: var(--primary-btn);
-}
-.card > button > .btn-face-purple a{
-  color: #fff;
-}
-.card > button:hover > .btn-face-purple {
-      position: absolute;
-      display: flex;
-      animation: btnToggle 500ms linear ;
-      color: #fff;
-}
-
-@keyframes btnToggle {
-  0%{
-    transform: translate(-110%,0);
-  }
-  100%{
-    transform: translate(0%);
-  }
-}
-/*Button cards: end*/
 
 /*Image*/
-.image{
-    display: flex;
-    align-items: center;
+.card-image{
+  margin-bottom: .6rem;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
 }
 
+
 .desktop{
-    width: 320px;
+  width: 240px;
 }
 
 .mobile{
-    width: 85px;
+  position: absolute;
+  right:10px;
+  top: -30px;
+  width: 65px;
 }
 
-.heading{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-  }
+.card > h2{
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
 
-  .heading svg{
-    width: 45px;
-  }
+.card > p{
+  margin-bottom: 1rem;
+  text-align: start;
+  font-size: 1.2rem;
+  color: #ddddddaf;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.card > span{
+ margin-bottom: 1rem; 
+color: #7c23cf;
+font-size: 1.6rem;
+font-weight: 600;
+}
+
+/*Icones:start*/
+.heading{
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.heading svg{
+  width: 35px;
+}
+/*Icones:end*/
+
+/*Link:start*/
+.card > a{
+  position: absolute;
+  bottom: 10px;
+  background-color:#7c23cf36 ;
+  padding: 1rem;
+  width: 90%;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.card > a:hover{
+  background-color: #7c23cf;
+  color: #000000ce;
+}
+/*Link:end*/
 /*Image:end*/
 
 .experience > .container{
@@ -600,14 +560,12 @@ main{
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 468px){
 
   html{
     overflow-x: hidden;
-  }
-  .hamburger{
-    display: none;
-  }
+  } 
+  
     /*Header */
     .heading-container{
         align-items: center;
@@ -667,6 +625,28 @@ main{
         font-size: 16px;
       }
 
+      .content-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card{
+        border: 2px;
+        position: relative;  
+        background-color: #000000ce;
+        display: flex;
+        flex: 2 2 200px;
+        flex-direction: column;
+        align-items: start;
+        width: 300px;
+        max-height: 530px;
+        padding: 2rem 2rem;
+        border-radius: 14px;
+        
+        }
+
     .heading{
         text-align: start;
         width: 100%;
@@ -691,6 +671,8 @@ main{
         .mobile{
         display: none;
 }
+
+
 
 /*section-experiencia*/
 
