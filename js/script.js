@@ -18,13 +18,9 @@ const scrollToNextSection = () => {
 document.addEventListener('scroll', () => {
     const scrollWidth = scrollY;
     const logo = document.querySelector(".logo");
-    if(scrollWidth > 600){
+    if(scrollWidth >= 1450){
         logo.classList.add("logo-active");
     }else{
-        logo.classList.remove("logo-active");
-    }
-
-    if(scrollWidth >= 1400){
         logo.classList.remove("logo-active");
     }
     

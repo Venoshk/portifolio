@@ -106,7 +106,7 @@
 }
 
 .logo-active{
-  width:80px;
+  width:200px;
   position: fixed;
   left: 0;
   top: 0;
@@ -223,7 +223,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -476,6 +476,151 @@
   .card > a:hover{
     color: #fff;
   }
+
+/*Skills*/
+.skills {
+  width: 100vw;
+  height: 100vh;
+  padding: 2.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.container-skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+}
+
+.skills-headline {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+}
+
+.skills-headline span {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.skills-headline h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.skills-headline p {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 1.6rem;
+  color: #fff;
+}
+
+.list-about  {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.6rem;
+}
+
+.list-about span{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.container-list {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.container-list i {
+  color: var(--primary);
+}
+
+.list-about li {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.skills-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 2rem 0rem;
+}
+
+.card-tech {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card-tech img {
+  width: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.card-tech:hover {
+  transform: translateY(-5px);
+}
+
+.card-tech:hover img {
+  opacity: 0.6;
+  filter: brightness(0) invert(1);
+}
+
+.card-tech:hover img[data-tech="html"] {
+  filter: sepia(1) hue-rotate(-35deg) saturate(5);
+}
+
+.card-tech:hover img[data-tech="css"] {
+  filter: sepia(1) hue-rotate(180deg) saturate(10);
+}
+
+.card-tech:hover img[data-tech="js"] {
+  filter: sepia(1) hue-rotate(45deg) saturate(10);
+}
+
+.card-tech:hover img[data-tech="bootstrap"] {
+  filter: sepia(1) hue-rotate(265deg) saturate(8);
+}
+
+.card-tech:hover img[data-tech="wordpress"] {
+  filter: sepia(1) hue-rotate(190deg) saturate(10);
+}
+
+.card-tech:hover img[data-tech="wix"] {
+  filter: sepia(1) hue-rotate(55deg) saturate(10);
+}
 
   
 

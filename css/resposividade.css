@@ -48,7 +48,9 @@
           transform: rotate(30deg);
         }
 
-  
+        .container-about{
+            padding: 2rem;
+        }
        
     .content-about {
         display: flex;
@@ -71,4 +73,22 @@
         margin-bottom: .6rem;
         width: 100%;
       }
-  }
+
+      .logo-active{
+        width: 80px;
+      }
+
+      .skills{
+        height: auto;
+      }
+
+      .container-skills{
+        padding: 2rem;
+        flex-direction: column;
+      }
+      .list-about li {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
