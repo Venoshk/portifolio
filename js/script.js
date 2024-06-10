@@ -24,7 +24,7 @@ document.addEventListener('scroll', () => {
         logo.classList.remove("logo-active");
     }
 
-    if(scrollWidth >= 900){
+    if(scrollWidth >= 1400){
         logo.classList.remove("logo-active");
     }
     

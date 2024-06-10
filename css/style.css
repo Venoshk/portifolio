@@ -106,7 +106,7 @@
 }
 
 .logo-active{
-  width:200px;
+  width:80px;
   position: fixed;
   left: 0;
   top: 0;
@@ -224,7 +224,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-
+  margin-bottom: 5rem;
 }
 
 .content-about { 
@@ -268,11 +268,12 @@
   width: 100%;
   height: auto;
   display: flex;
-  
   align-items: center;
+  
 }
 
 .btn-about {
+ 
   width: 100%;
   height: auto;
   display: flex;
