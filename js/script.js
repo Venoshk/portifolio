@@ -15,6 +15,22 @@ const scrollToNextSection = () => {
   chevron.addEventListener("click", () => scrollToNextSection());
 });
 
+document.addEventListener('scroll', () => {
+    const scrollWidth = scrollY;
+    const logo = document.querySelector(".logo");
+    if(scrollWidth > 600){
+        logo.classList.add("logo-active");
+    }else{
+        logo.classList.remove("logo-active");
+    }
+
+    if(scrollWidth >= 900){
+        logo.classList.remove("logo-active");
+    }
+    
+    
+})
+
 
 
 
