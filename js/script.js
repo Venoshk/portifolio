@@ -6,7 +6,7 @@ const chevron = document.querySelector("#scrollBtn")
 
 
 const scrollToNextSection = () => {
-      const nextSection = document.querySelector('.about');
+      const nextSection = document.querySelector('.projects');
       if (nextSection) {
           nextSection.scrollIntoView({ behavior: 'smooth' });
       }
