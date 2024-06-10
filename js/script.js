@@ -6,7 +6,7 @@ const chevron = document.querySelector("#scrollBtn")
 
 
 const scrollToNextSection = () => {
-      const nextSection = document.querySelector('.projects');
+      const nextSection = document.querySelector('.about');
       if (nextSection) {
           nextSection.scrollIntoView({ behavior: 'smooth' });
       }
@@ -18,10 +18,15 @@ const scrollToNextSection = () => {
 document.addEventListener('scroll', () => {
     const scrollWidth = scrollY;
     const logo = document.querySelector(".logo");
-    if(scrollWidth >= 1450){
+    if(scrollWidth > 600){
         logo.classList.add("logo-active");
-    }else{
+    }else if(scrollWidth > 1000){
+        logo.style.right = "0"
+    }
+    
+    else{
         logo.classList.remove("logo-active");
+
     }
     
     
