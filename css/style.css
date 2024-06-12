@@ -31,6 +31,17 @@
     background: #000; 
     border-radius: 20px;     
   }
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-btn);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999999;
+  }
 
   #particles-js {
     position: absolute;
@@ -361,6 +372,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 5rem;
 }
 
 .content-project{
@@ -440,13 +452,12 @@
   
   /*Link:start*/
   .card > a{ 
-    position: absolute;
-    bottom: 10px;
+    position: relative;
     text-align: center;
     font-size: 1.2rem;
     background-color:#fff ;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     color: #24262a;
     font-weight: bold;
     border-radius: 5px;

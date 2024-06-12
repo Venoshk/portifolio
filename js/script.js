@@ -1,9 +1,5 @@
-const test = document.querySelector(".p");
-console.log(test)
 document.addEventListener("DOMContentLoaded", function() {
 const chevron = document.querySelector("#scrollBtn")
-
-
 
 const scrollToNextSection = () => {
       const nextSection = document.querySelector('.about');
